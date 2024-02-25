@@ -1,38 +1,35 @@
 //res
+let hamburgerBtn = document.getElementById("hamburger");
+hamburgerBtn.addEventListener("click", () => {
+    document.querySelector(".left").style.left = "0"
+})
 
-// let hamburgerBtn = document.getElementById("hamburger");
-// let closeBtn = document.getElementById("closeBtn");
-// let leftNavBar = document.querySelector(".left");
-// hamburgerBtn.addEventListener("click", () => {
-//     // leftNavBar.classList.add("activenav");
-//     leftNavBar.style.marginRight = 0;
-//     console.log("jon")
-// })
+let closeBtn = document.getElementById("closeBtn");
+closeBtn.addEventListener("click", () => {
+    document.querySelector(".left").style.left = "-200%"
 
-
-
+})
 
 
 
 
 
-
-let arr = [
+let musicArrayarr = [
     { url: "./assets/songs/Arjan Vailly Ne.mp3", songName: "Dunki", subtitle: "Dunki Drop 5: O Maahi | Shah Rukh Kha n | Taapsee Pannu | Pritam |Arijit Singh | Irshad Kamil", img: "./assets/img/cover.jpg" },
 
 
-    { url: "./assets/songs/Arjan Vailly Ne.mp3", songName: "Dunki", subtitle: "Dunki Drop 5: O Maahi | Shah Rukh Kha n | Taapsee Pannu | Pritam |Arijit Singh | Irshad Kamil", img: "./assets/img/cover2.jpg" },
-    { url: "./assets/songs/Pehle Bhi Main.mp3", songName: "Dunki", subtitle: "Dunki Drop 5: O Maahi | Shah Rukh Kha n | Taapsee Pannu | Pritam |Arijit Singh | Irshad Kamil", img: "./assets/img/cover3.jpg" },
+    { url: "./assets/songs/Arjan Vailly Ne.mp3", songName: "Dunki", subtitle: "hello", img: "./assets/img/cover2.jpg" },
+    { url: "./assets/songs/Pehle Bhi Main.mp3", songName: "mind fresh song", subtitle: "", img: "./assets/img/cover3.jpg" },
 
-    { url: "./assets/songs/Ram Siya Ram.mp3", songName: " Dunki", subtitle: "Dunki Drop 5: O Maahi | Shah Rukh Kha n | Taapsee Pannu | Pritam |Arijit Singh | Irshad Kamil", img: "./assets/img/cover4.jpg" },
+    { url: "./assets/songs/Ram Siya Ram.mp3", songName: " Dunki", subtitle: "hello2", img: "./assets/img/cover4.jpg" },
 
-    { url: "./assets/songs/Arjan Vailly Ne.mp3", songName: "Dunki", subtitle: "Dunki Drop 5: O Maahi | Shah Rukh Kha n | Taapsee Pannu | Pritam |Arijit Singh | Irshad Kamil", img: "./assets/img/cover5.jpg" },
+    { url: "./assets/songs/Arjan Vailly Ne.mp3", songName: "Dunki", subtitle: "hello3", img: "./assets/img/cover5.jpg" },
 
-    { url: "./assets/songs/Arjan Vailly Ne.mp3", songName: "Dunki", subtitle: "Dunki Drop 5: O Maahi | Shah Rukh Kha n | Taapsee Pannu | Pritam |Arijit Singh | Irshad Kamil", img: "./assets/img/cover6.jpg" },
+    { url: "./assets/songs/Arjan Vailly Ne.mp3", songName: "Dunki", subtitle: "hello4", img: "./assets/img/cover6.jpg" },
 
-    { url: "./assets/songs/Arjan Vailly Ne.mp3", songName: "Dunki", subtitle: "Dunki Drop 5: O Maahi | Shah Rukh Kha n | Taapsee Pannu | Pritam |Arijit Singh | Irshad Kamil", img: "./assets/img/cover7.jpg" },
+    { url: "./assets/songs/Arjan Vailly Ne.mp3", songName: "Dunki", subtitle: "hello5", img: "./assets/img/cover7.jpg" },
 
-    { url: "./assets/songs/Arjan Vailly Ne.mp3", songName: "Dunki", subtitle: "Dunki Drop 5: O Maahi | Shah Rukh Kha n | Taapsee Pannu | Pritam |Arijit Singh | Irshad Kamil", img: "./assets/img/cover8.jpg" },
+    { url: "./assets/songs/Arjan Vailly Ne.mp3", songName: "Dunki", subtitle: "hello6", img: "./assets/img/cover8.jpg" },
 
 
 
@@ -43,7 +40,7 @@ let arr = [
 let audio = new Audio();
 let clutter = "";
 let result = document.querySelector(".card-container")
-arr.forEach((data, idex) => {
+musicArrayarr.forEach((data, idex) => {
     // console.log(data)
 
     clutter += `<div class="music-container" id="${idex}">
@@ -60,11 +57,15 @@ arr.forEach((data, idex) => {
         </p>
     </div>
 </div>`
-    // console.log(clutter)
+    console.log(clutter)
 })
-let cardContainer = document.querySelector(".card-container")
+let currentIndex = 0;
+let audioElement = new Audio();
 result.innerHTML = clutter;
-cardContainer.addEventListener("click", (event) => {
+
+result.addEventListener("click", (event) => {
+
+    console.log(musicArrayarr[event.target.id].songName)
     // const clickedElement = event.target.closest('.music-container');
     // if (clickedElement) {
     //     const dataIndex = parseInt(clickedElement.id);
@@ -93,3 +94,41 @@ cardContainer.addEventListener("click", (event) => {
 //         }
 //     }
 // });
+
+
+function volumeFunction() {
+    let volumeBtn = document.querySelector("#volumeBtn");
+    let volume = 0; // Variable name corrected to "volume"
+    volumeBtn.addEventListener("click", () => {
+        if (volume === 0) {
+            volumeBtn.src = './assets/img/mute.svg'
+            volume = 1;
+        } else {
+            volumeBtn.src = "./assets/img/volume.svg"
+            volume = 0;
+        }
+    });
+}
+
+volumeFunction()
+
+let playBtn = document.querySelector("#playBtn");
+let play = 0;
+
+let pauseBtn = document.querySelector("#pause-line")
+playBtn.addEventListener("click", () => {
+    console.log("joni haldaer")
+
+    if (play === 0) {
+        playBtn.style.opacity = "0";
+        pauseBtn.style.opacity = "1"
+        play = 1;
+    }
+
+    else {
+
+        playBtn.style.opacity = "1";
+        pauseBtn.style.opacity = "0"
+        play = 0;
+    }
+})

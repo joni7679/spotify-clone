@@ -1,0 +1,15 @@
+.flex{
+    display: flex;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.jutify-center{
+    justify-content: center;
+}
+
+.gap5{
+    gap: 5px;
+}

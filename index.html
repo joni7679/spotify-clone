@@ -7,6 +7,7 @@
     <title>My Spotify Clone</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/utility.css">
     <link rel="icon" href="./assets/img/favicon.ico">
 </head>
 
@@ -15,8 +16,8 @@
         <div class="left">
             <div class="home">
                 <ul>
-                    <li><img id="logo" class="invert" src="./assets/img/logo.svg" alt="logo"> <img  id="closeBtn" class="invert"
-                            src="./assets/img/close.svg" alt="">
+                    <li><img id="logo" class="invert" src="./assets/img/logo.svg" alt="logo"> <img id="closeBtn"
+                            class="invert" src="./assets/img/close.svg" alt="">
                     </li>
                     <li><img class="invert" src="./assets/img/home.svg" alt="home">Home</li>
                     <li><img class="invert" src="./assets/img/search.svg" alt="Search">Search</li>
@@ -60,29 +61,29 @@
             <div class="all-music-box">
                 <h1>all spotify song</h1>
                 <div class="card-container">
-
-
                 </div>
-
-
             </div>
-
-
             <div class="player">
                 <div class="above-bar">
-                    <div class="div"></div>
+                    <div class="music-title-box flex align-center jutify-center gap5  ">
+                        <i id="" class="ri-music-2-line invert"></i>
+                        <p class="invert">Dunki Drop 5: O Maahi</p>
+
+                    </div>
                     <div class="action-bar">
-                        <img class="invert" src="./assets/img/prevsong.svg" alt="">
-                        <img class="invert" src="./assets/img/play.svg" alt="">
-                        <img class="invert" src="./assets/img/nextsong.svg" alt="nextsong">
+                        <img class="invert pointer" src="./assets/img/prevsong.svg" alt="">
+                        <img class="invert pointer" onclick="playMusic()" id="playBtn" src="./assets/img/play.svg"
+                            alt="">
+                        <img class="invert pointer" id="pause-line" src="./assets/img/pause-line.svg" alt="">
+                        <img class="invert  pointer" src="./assets/img/nextsong.svg" alt="nextsong">
                     </div>
                     <div class="sound-bar">
-                        <img class="invert" src="./assets/img/volume.svg" alt="">
+                        <img class="invert  pointer" id="volumeBtn" src="./assets/img/volume.svg" alt="">
                         <input type="range" min="0" max="100">
                     </div>
                 </div>
-                <div class="seek-bar">
-                    <div class="cricle"></div>
+                <div class="seek-bar pointer">
+                    <div class="cricle pointer"></div>
                 </div>
             </div>
 
@@ -91,7 +92,7 @@
                     <h3>company</h3>
                     <a href="#">jobs</a>
                     <a href="#">about</a>
-                    <a href="#">jobs</a>
+                    <a href="#">jo</a>
                     <a href="#">jobs</a>
                 </div>
                 <div class="footer-box">

@@ -425,9 +425,18 @@ footer .footer-box a:hover {
 
     .header {
         flex-direction: column;
+        text-align: center;
     }
 
     .right-menu-bar {
         margin-top: 13px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-box {
+        margin-top: 15px;
     }
 }

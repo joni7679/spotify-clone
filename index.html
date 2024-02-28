@@ -65,21 +65,19 @@
             </div>
             <div class="player">
                 <div class="above-bar">
-                    <div class="music-title-box flex align-center jutify-center gap5  ">
+                    <div class="music-title-box flex align-center justify-center gap5  ">
                         <i id="" class="ri-music-2-line invert"></i>
-                        <p class="invert">Dunki Drop 5: O Maahi</p>
+                        <p class="invert" id="music-tittle">Dunki Drop 5: O Maahi</p>
 
                     </div>
                     <div class="action-bar">
-                        <img class="invert pointer" src="./assets/img/prevsong.svg" alt="">
-                        <img class="invert pointer" onclick="playMusic()" id="playBtn" src="./assets/img/play.svg"
-                            alt="">
-                        <img class="invert pointer" id="pause-line" src="./assets/img/pause-line.svg" alt="">
-                        <img class="invert  pointer" src="./assets/img/nextsong.svg" alt="nextsong">
+                        <img class="invert pointer" id="prevs" src="./assets/img/prevsong.svg" alt="">
+                        <img class="invert pointer" id="playBtn" src="./assets/img/play.svg" alt="">
+                        <img class="invert  pointer" id="next" src="./assets/img/nextsong.svg" alt="nextsong">
                     </div>
                     <div class="sound-bar">
                         <img class="invert  pointer" id="volumeBtn" src="./assets/img/volume.svg" alt="">
-                        <input type="range" min="0" max="100">
+                        <input type="range" id="volumeControl" min="0" max="100" value="1">
                     </div>
                 </div>
                 <div class="seek-bar pointer">

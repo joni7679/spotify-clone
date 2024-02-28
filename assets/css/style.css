@@ -113,6 +113,11 @@ nav i {
     text-transform: capitalize;
 }
 
+.btn:hover {
+    scale: 1.1;
+    transition: 0.4s ease-in;
+}
+
 .login-btn {
     border-radius: 22px;
     background-color: #F6F6F6;
@@ -204,6 +209,7 @@ nav i {
     height: 80%;
     padding: 5px 12px;
     position: relative;
+    pointer-events: none;
 }
 
 .music-theam img {
@@ -240,11 +246,12 @@ nav i {
     padding: 4px 8px;
 }
 
-#musicon{
+#musicon {
     position: absolute;
     left: 13px;
     top: 0;
 }
+
 .player {
     bottom: 0;
     /* position: fixed; */
